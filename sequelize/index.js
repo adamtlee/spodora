@@ -1,6 +1,8 @@
 require('dotenv').config
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize( process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, {
+
+// Temporarily hardcoded values which is bad practice, in actual practice I'll replace the parameters with .env variables/
+const sequelize = new Sequelize( 'spodora', 'admin', 'password', {
     host: 'localhost',
     port: '5432',
     dialect: 'postgres',
