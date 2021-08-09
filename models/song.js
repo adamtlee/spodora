@@ -22,5 +22,35 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Song',
   });
+
+/*
+***Insert a record into the DB***
+  (async () => {
+    await sequelize.sync(); 
+    const newSong = await Song.create({
+      title: "Airplanes",
+      artist: "BoB",
+      album: "B.o.B Presents: The Adventures of Bobby Ray",
+      year: "2010",
+      genre: "Pop"
+    }); 
+    console.log(newSong.toJSON);
+  })();
+  
+*/  
+
+/*
+***Retrieve all records from a database***
+(async () => {
+  await sequelize.sync();
+  const songs = await Song.findAll();
+  console.log(songs.every(song => song instanceof Song));
+  console.log("All users: ", JSON.stringify(songs, null, 2));
+  sequelize.close();
+})();
+*/
   return Song;
 };
+
+
+
